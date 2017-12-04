@@ -1,4 +1,5 @@
 import bs4
+import datetime
 import re
 import sys
 import urllib
@@ -9,16 +10,19 @@ CLUB_URL_TEMPLATE = BASE_URL + '/clubs/members.php?club=%s'
 RESULTS_URL_TEMPLATE = BASE_URL + '/results/?compid=%s'
 
 
-def date_name_permit(tr):
-  date = tr.find('span', class_='homearticleheader').text[0:10]
+def extract_first_row(tr):
+  date_text = tr.find('span', class_='homearticleheader').text[0:10]
   name, url = tr.find('a').text.strip(), tr.find('a')['href']
   permit_id = re.search('permit=([0-9-]+)', url).group(1)
-  month, day, year = date.split('/')
-  sortable_date = '%s-%s-%s' % (year, month, day)
-  return {'date': sortable_date, 'name': name, 'permit_id': permit_id}
+  month, day, year = date_text.split('/')
+  date = '%s-%s-%s' % (year, month, day)
+  discipline = tr.find('span', title='discipline').text.strip()
+  age = tr.find('span', title='age')
+  age = age.text.strip() if age else None
+  return {'age': age, 'date': date, 'discipline': discipline, 'name': name, 'permit_id': permit_id}
 
 
-def field_place(tr):
+def extract_second_row(tr):
   text = tr.find('td').text.strip()
   if not re.search('^\d+ \/ \d+$', text):
     return None
@@ -69,16 +73,25 @@ def main(args):
     assert len(races) % 2 == 0
     num_races = len(races) / 2
 
-    date_name_permits = map(date_name_permit, races[0::2])
-    field_places = map(field_place, races[1::2])
-    assert len(date_name_permits) == num_races and len(field_places) == num_races
+    first_rows = map(extract_first_row, races[0::2])
+    second_rows = map(extract_second_row, races[1::2])
+    assert len(first_rows) == num_races and len(second_rows) == num_races
 
     for i in range(0, num_races):
-      if field_places[i]:
-        result = {'member': member}
-        result.update(date_name_permits[i])
-        result.update(field_places[i])
-        results.append(result)
+      if not second_rows[i]:
+        continue  # DNF
+      result = {'member': member}
+      result.update(first_rows[i])
+      result.update(second_rows[i])
+      results.append(result)
+
+  if args.only_current_year:
+    current_year = str(datetime.datetime.now().year)
+    results = filter(lambda r: r['date'].startswith(current_year), results)
+
+  if args.only_road:
+    road_reg = '^(RR|CRIT|ITT|TT|OMNI|GC|CCR|STR)$'
+    results = filter(lambda r: re.search(road_reg, r['discipline']), results)
 
   if args.min_field_size:
     results = filter(lambda r: r['field'] >= args.min_field_size, results)
@@ -89,9 +102,6 @@ def main(args):
   if args.sort_by_date:
     results = sorted(results, key=lambda r: r['date'], reverse=True)
 
-  if args.max_results:
-    results = results[0:args.max_results]
-
   return results
 
 
@@ -99,10 +109,11 @@ if __name__ == '__main__':
   import argparse
   parser = argparse.ArgumentParser(description="Scrape a USAC club's results")
   parser.add_argument('club_id', type=int, help='USAC club ID')
-  parser.add_argument('--max_results', type=int, help='Maxium number of results to show', default=10)
+  parser.add_argument('--jsonp_callback', type=str, help='A JSONP callback')
   parser.add_argument('--min_field_size', type=int, help='Minimum race field size')
   parser.add_argument('--min_place', type=int, help='Minimum race place', default=10)
-  parser.add_argument('--jsonp_callback', type=str, help='A JSONP callback')
+  parser.add_argument('--only_current_year', type=bool, help='Only show results from current year', default=True)
+  parser.add_argument('--only_road', type=bool, help='Only road results', default=True)
   parser.add_argument('--sort_by_date', type=bool, help='Sort results reverse chronologically', default=True)
   args = parser.parse_args(sys.argv[1:])
   import json

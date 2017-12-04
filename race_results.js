@@ -54,7 +54,10 @@ function tryReady() {
 
     var race = document.createElement('a');
     race.className = 'race';
-    race.textContent = race.innerText = result.name;
+    var raceName = result.name + ' (' + result.discipline;
+    if (result.age) raceName += ', ' + result.age;
+    raceName += ')';
+    race.textContent = race.innerText = raceName;
     race.href = PERMIT_BASE + result.permit_id;
     race.target = '_blank';
 

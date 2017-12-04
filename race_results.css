@@ -17,8 +17,11 @@
   flex-direction: column;
 }
 
+.rider {
+  font-weight: 500;
+}
+
 .race {
-  max-width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
