@@ -84,7 +84,7 @@ def main(args):
     results = filter(lambda r: r['field'] >= args.min_field_size, results)
 
   if args.min_place:
-    results = filter(lambda r: r['place'] >= args.min_place, results)
+    results = filter(lambda r: r['place'] <= args.min_place, results)
 
   if args.sort_by_date:
     results = sorted(results, key=lambda r: r['date'], reverse=True)
@@ -100,8 +100,13 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser(description="Scrape a USAC club's results")
   parser.add_argument('club_id', type=int, help='USAC club ID')
   parser.add_argument('--max_results', type=int, help='Maxium number of results to show', default=10)
-  parser.add_argument('--min_field_size', type=int, help='Minimum race field size', default=11)
+  parser.add_argument('--min_field_size', type=int, help='Minimum race field size')
   parser.add_argument('--min_place', type=int, help='Minimum race place', default=10)
+  parser.add_argument('--jsonp_callback', type=str, help='A JSONP callback')
   parser.add_argument('--sort_by_date', type=bool, help='Sort results reverse chronologically', default=True)
+  args = parser.parse_args(sys.argv[1:])
   import json
-  print json.dumps(main(parser.parse_args(sys.argv[1:])))
+  results_json = json.dumps(main(args))
+  if args.jsonp_callback:
+    results_json = args.jsonp_callback + '(' + results_json + ')'
+  print results_json
