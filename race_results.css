@@ -1,0 +1,40 @@
+.result {
+  display: flex;
+  min-height: 4em;
+}
+
+.result + .result {
+  border-top: 1px solid rgba(0, 0, 0, .125);
+}
+
+.result > * {
+  padding: 12px 0;
+}
+
+.rider-and-race {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.race {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.place, .date {
+  align-self: center;
+  display: inline-block;
+}
+
+.date {
+  flex-basis: 3.5em;
+  text-align: right;
+}
+
+.place {
+  flex-basis: 3em;
+  font-size: 1.5em;
+}
