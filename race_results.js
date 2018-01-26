@@ -28,10 +28,14 @@ function tryReady() {
   if (!loaded || !results || !results.length)
     return;
 
-  var resultsEl = window.document.querySelector('#block-039956242ae051b42fa7');
-  if (!resultsEl) {
+  var loadingEl = document.querySelector('#block-376b217484330bb6c34e p');
+  if (!loadingEl) {
     return;
   }
+
+  var resultsEl = document.createElement('div');
+  loadingEl.parentNode.appendChild(resultsEl);
+  loadingEl.parentNode.removeChild(loadingEl);
 
   resultsEl.className += ' results';
 
