@@ -111,9 +111,9 @@ if __name__ == '__main__':
   parser.add_argument('club_id', type=int, help='USAC club ID')
   parser.add_argument('--jsonp_callback', type=str, help='A JSONP callback')
   parser.add_argument('--min_field_size', type=int, help='Minimum race field size')
-  parser.add_argument('--min_place', type=int, help='Minimum race place', default=10)
+  parser.add_argument('--min_place', type=int, help='Minimum race place')
   parser.add_argument('--only_current_year', type=bool, help='Only show results from current year', default=True)
-  parser.add_argument('--only_road', type=bool, help='Only road results', default=True)
+  parser.add_argument('--only_road', type=bool, help='Only road results')
   parser.add_argument('--sort_by_date', type=bool, help='Sort results reverse chronologically', default=True)
   args = parser.parse_args(sys.argv[1:])
   import json
