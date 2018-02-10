@@ -15,15 +15,14 @@ readonly SCRAPE_CMD="python $HERE/scrape_usac_club.py"
 readonly CLUB_ID=15733
 readonly EXTRA_ARGS="--jsonp_callback got_race_results"
 
-readonly TMP_FILE="$HERE/got_race_results.js.tmp"
 readonly RESULTS_FILE="$HERE/got_race_results.js"
+readonly TMP_FILE="$RESULTS_FILE.tmp"
 
 log "scraping USAC"
 eval "$SCRAPE_CMD $CLUB_ID $EXTRA_ARGS" > "$TMP_FILE"
 log "done scraping USAC"
 
 readonly DIFF_RESULTS=$(diff "$RESULTS_FILE" "$TMP_FILE")
-
 if [[ -z "$DIFF_RESULTS" ]]; then
   log "same results"
   rm "$TMP_FILE"
@@ -34,7 +33,7 @@ else
   git add "$RESULTS_FILE"
   git commit -q -m 'new results'
   eval `ssh-agent` >/dev/null
-  ssh-add race_results.rsa >/dev/null
+  ssh-add -q race_results.rsa
   git push -f -q origin master
   popd >/dev/null
   eval `ssh-agent -k` >/dev/null
