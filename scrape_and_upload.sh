@@ -30,11 +30,13 @@ if [[ -z "$DIFF_RESULTS" ]]; then
 else
   /bin/mv "$TMP_FILE" "$RESULTS_FILE"
   log "new results"
+  pushd "$HERE" >/dev/null
   git add "$RESULTS_FILE"
   git commit -q -m 'new results'
   eval `ssh-agent` >/dev/null
   ssh-add race_results.rsa >/dev/null
   git push -f -q origin master
+  popd >/dev/null
   eval `ssh-agent -k` >/dev/null
 fi
 
