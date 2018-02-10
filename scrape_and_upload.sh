@@ -33,7 +33,7 @@ else
   git add "$RESULTS_FILE"
   git commit -q -m 'new results'
   eval `ssh-agent` >/dev/null
-  ssh-add -q race_results.rsa
+  ssh-add race_results.rsa >/dev/null 2>&1
   git push -f -q origin master
   popd >/dev/null
   eval `ssh-agent -k` >/dev/null
