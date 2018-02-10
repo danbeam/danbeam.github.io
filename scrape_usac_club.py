@@ -67,8 +67,8 @@ def main(args):
     member_url = RESULTS_URL_TEMPLATE % member['comp_id']
     races = make_soup(member_url).find('table').find_all(result_pair)
 
-    # if not races:
-    #  print >> sys.stderr, 'No race results found for %s (%s)' % (member['name'], member_url)
+    if not races:
+      print >> sys.stderr, 'No race results found for %s (%s)' % (member['name'], member_url)
 
     assert len(races) % 2 == 0
     num_races = len(races) / 2
