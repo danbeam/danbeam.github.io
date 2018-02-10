@@ -63,7 +63,12 @@ def main(args):
   if not members:
     print >> sys.stderr, 'No members for that club found'
 
+  excluded_comp_ids = args.exclude_comp_ids.split(',')
+
   for member in members:
+    if member['comp_id'] in excluded_comp_ids:
+      continue
+
     member_url = RESULTS_URL_TEMPLATE % member['comp_id']
     races = make_soup(member_url).find('table').find_all(result_pair)
 
@@ -109,6 +114,7 @@ if __name__ == '__main__':
   import argparse
   parser = argparse.ArgumentParser(description="Scrape a USAC club's results")
   parser.add_argument('club_id', type=int, help='USAC club ID')
+  parser.add_argument('--exclude_comp_ids', type=str, help='Comma separated list of competitor IDs to exclude')
   parser.add_argument('--jsonp_callback', type=str, help='A JSONP callback')
   parser.add_argument('--min_field_size', type=int, help='Minimum race field size')
   parser.add_argument('--min_place', type=int, help='Minimum race place')
