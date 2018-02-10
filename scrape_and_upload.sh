@@ -17,17 +17,17 @@ readonly TMP_FILE="$HERE/got_race_results.js.tmp"
 readonly RESULTS_FILE="$HERE/got_race_results.js"
 
 eval "$SCRAPE_CMD $CLUB_ID $EXTRA_ARGS" > "$TMP_FILE"
-exit 0
 
 readonly DIFF_RESULTS=$(diff "$RESULTS_FILE" "$TMP_FILE")
 
-if [ -z "$DIFF_RESULTS" ]; then
+if [ -z "$DIFF_RESULTS" ] && [ "$@" != "-f" ]; then
   log "same results"
   rm "$TMP_FILE"
 else
   /bin/mv "$TMP_FILE" "$RESULTS_FILE"
   log "got new results"
-  git commit -a -m 'new results'
+  git add "$RESULTS_FILE"
+  git commit -m 'new results'
   eval `ssh-agent`
   ssh-add race_results.rsa
   git push origin master
