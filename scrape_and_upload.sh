@@ -32,9 +32,10 @@ else
   log "new results"
   git add "$RESULTS_FILE"
   git commit -q -m 'new results'
-  { eval `ssh-agent`; ssh-add race_results.rsa; } &>/dev/null
+  eval `ssh-agent` >/dev/null
+  ssh-add race_results.rsa >/dev/null
   git push -f -q origin master
-  { eval `ssh-agent -k`; } &>/dev/null
+  eval `ssh-agent -k` >/dev/null
 fi
 
 log "going back to bed"
