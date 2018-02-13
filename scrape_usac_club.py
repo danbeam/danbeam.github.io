@@ -105,7 +105,7 @@ def main(args):
     results = filter(lambda r: r['place'] <= args.min_place, results)
 
   if args.sort_by_date:
-    results = sorted(results, key=lambda r: r['date'], reverse=True)
+    results = sorted(results, key=lambda r: r['date'] + r['permit_id'], reverse=True)
 
   return results
 
