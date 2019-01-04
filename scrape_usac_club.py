@@ -90,9 +90,10 @@ def main(args):
       result.update(second_rows[i])
       results.append(result)
 
-  if args.only_current_year:
-    current_year = str(datetime.datetime.now().year)
-    results = filter(lambda r: r['date'].startswith(current_year), results)
+  if args.since:
+    parse_date = lambda s: datetime.datetime.strptime(s, '%Y-%m-%d')
+    since = parse_date(args.since)
+    results = filter(lambda r: parse_date(r['date']) > since, results)
 
   if args.only_road:
     road_reg = '^(RR|CRIT|ITT|TT|OMNI|GC|CCR|STR)$'
@@ -118,7 +119,7 @@ if __name__ == '__main__':
   parser.add_argument('--jsonp_callback', type=str, help='A JSONP callback')
   parser.add_argument('--min_field_size', type=int, help='Minimum race field size')
   parser.add_argument('--min_place', type=int, help='Minimum race place')
-  parser.add_argument('--only_current_year', type=bool, help='Only show results from current year', default=True)
+  parser.add_argument('--since', type=str, help='Only show results since this date (Y-m-d)', default='%s-01-01' % datetime.datetime.now().year)
   parser.add_argument('--only_road', type=bool, help='Only road results')
   parser.add_argument('--sort_by_date', type=bool, help='Sort results reverse chronologically', default=True)
   args = parser.parse_args(sys.argv[1:])
