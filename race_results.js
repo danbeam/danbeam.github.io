@@ -6,7 +6,7 @@ var results;
 window.got_race_results = function(list) { results = list; tryReady(); };
 
 if (!loaded)
-  window.addEventListener('load', function() {loaded = true; tryReady(); });
+  window.addEventListener('load', function() { loaded = true; tryReady(); });
 
 function formatDate(sqlDate) {
   var date = new Date(sqlDate);
