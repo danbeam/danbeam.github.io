@@ -2,12 +2,21 @@ import bs4
 import datetime
 import re
 import sys
-import urllib
+import urllib2
 
 
-BASE_URL = 'https://legacy.usacycling.org'
+BASE_URL = 'http://legacy.usacycling.org'
 CLUB_URL_TEMPLATE = BASE_URL + '/clubs/members.php?club=%s'
 RESULTS_URL_TEMPLATE = BASE_URL + '/results/?compid=%s'
+
+
+_HTTP_PROXY = open('http_proxy.txt').read().strip()
+_USER_AGENT = open('user_agent.txt').read().strip()
+
+
+_PROXY_HANDLER = urllib2.ProxyHandler({'http': _HTTP_PROXY})
+_URL_OPENER = urllib2.build_opener(_PROXY_HANDLER)
+_URL_OPENER.addheaders = [('User-Agent', _USER_AGENT)]
 
 
 def extract_first_row(tr):
@@ -44,7 +53,7 @@ def make_member(a):
 
 
 def make_soup(url):
-  return bs4.BeautifulSoup(urllib.urlopen(url).read(), 'html.parser')
+  return bs4.BeautifulSoup(_URL_OPENER.open(url).read(), 'html.parser')
 
 
 def result_pair(el):
