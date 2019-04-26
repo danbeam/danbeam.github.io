@@ -2,6 +2,7 @@ import bs4
 import datetime
 import re
 import sys
+import time
 import urllib2
 
 
@@ -53,7 +54,10 @@ def make_member(a):
 
 
 def make_soup(url):
-  return bs4.BeautifulSoup(_URL_OPENER.open(url).read(), 'html.parser')
+  start = time.time()
+  contents = _URL_OPENER.open(url).read()
+  print >> sys.stderr, 'Loading %s took %.2f seconds' % (url, time.time() - start)
+  return bs4.BeautifulSoup(contents, 'html.parser')
 
 
 def result_pair(el):
@@ -66,6 +70,7 @@ def result_pair(el):
 
 def main(args):
   club_url = CLUB_URL_TEMPLATE % args.club_id
+  print >> sys.stderr, 'Scraping club: %s' % club_url
   members = map(make_member, make_soup(club_url).find_all(member_link))
   results = []
 
@@ -79,6 +84,7 @@ def main(args):
       continue
 
     member_url = RESULTS_URL_TEMPLATE % member['comp_id']
+    print >> sys.stderr, 'Scraping member: %s (%s)' % (member['name'], member_url)
     races = make_soup(member_url).find('table').find_all(result_pair)
 
     if not races:
