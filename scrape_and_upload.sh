@@ -19,7 +19,7 @@ readonly RESULTS_FILE="$HERE/got_race_results.js"
 readonly TMP_FILE="$RESULTS_FILE.tmp"
 
 log "scraping USAC"
-eval "$SCRAPE_CMD $CLUB_ID $EXTRA_ARGS" > "$TMP_FILE"
+eval "$SCRAPE_CMD $CLUB_ID $EXTRA_ARGS" 1>"$TMP_FILE" 2>>"$LOG_FILE"
 log "done scraping USAC"
 
 readonly DIFF_RESULTS=$(diff "$RESULTS_FILE" "$TMP_FILE")
