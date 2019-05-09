@@ -9,7 +9,7 @@ if (!loaded)
   window.addEventListener('load', function() { loaded = true; tryReady(); });
 
 function formatDate(sqlDate) {
-  var date = new Date(sqlDate);
+  var date = new Date(sqlDate + ' 00:00:00');
   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   return months[date.getMonth()] + ' ' + date.getDate() + ' ' + date.getFullYear();
 }

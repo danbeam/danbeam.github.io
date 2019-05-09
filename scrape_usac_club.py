@@ -1,5 +1,7 @@
 import bs4
 import datetime
+import os
+import random
 import re
 import sys
 import time
@@ -11,8 +13,11 @@ CLUB_URL_TEMPLATE = BASE_URL + '/clubs/members.php?club=%s'
 RESULTS_URL_TEMPLATE = BASE_URL + '/results/?compid=%s'
 
 
-_HTTP_PROXY = open('http_proxy.txt').read().strip()
-_USER_AGENT = open('user_agent.txt').read().strip()
+_HERE = os.path.dirname(__file__)
+_USER_AGENT = open(os.path.join(_HERE, 'user_agent.txt')).read().strip()
+_ALL_PROXIES = open(os.path.join(_HERE, 'http_proxy.txt')).read().strip().splitlines()
+_HTTP_PROXY = _ALL_PROXIES[random.randint(0, len(_ALL_PROXIES) - 1)].strip()
+print >> sys.stderr, 'Using HTTP proxy: %s' % _HTTP_PROXY
 
 
 _PROXY_HANDLER = urllib2.ProxyHandler({'http': _HTTP_PROXY})
