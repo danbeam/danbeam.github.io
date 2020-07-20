@@ -4,19 +4,19 @@
 @import "{{ site.theme }}";
 
 ul li {
-  display: flex;
   list-style: none;
+  position: relative;
 }
 
 ul li::before {
   content: '>';
-  margin-inline-start: -16px;
-  margin-inline-end: 16px;
+  left: -24px;
   opacity: .5;
+  position: absolute;
 }
 
 p, ul {
   & + h3 {
-    margin-top: 4em;
+    margin-top: 3em;
   }
 }
