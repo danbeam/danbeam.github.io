@@ -4,8 +4,74 @@ title: Dan Beam's Resumé
 
 ## Education
 
-- B.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2005 - 2009)
-- M.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2009 - on leave)
+B.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2005 - 2009)<br>
+M.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2009 - on leave)
+
+## Skills
+
+<div class="rating" data-rate="1">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating" data-rate="1.5">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating" data-rate="2">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating" data-rate="2.5">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating" data-rate="3">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating" data-rate="3.5">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating rating-4" data-rate="4">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating" data-rate="4.5">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
+<div class="rating" data-rate="5">
+  <i class="star-1">★</i>
+  <i class="star-2">★</i>
+  <i class="star-3">★</i>
+  <i class="star-4">★</i>
+  <i class="star-5">★</i>
+</div>
 
 ## Experience
 
