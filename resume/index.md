@@ -9,69 +9,25 @@ M.S., Computer Science - [California State University-Fullerton](http://fullerto
 
 ## Skills
 
-<div class="rating" data-rate="1">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
-<div class="rating" data-rate="1.5">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
-<div class="rating" data-rate="2">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
-<div class="rating" data-rate="2.5">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
-<div class="rating" data-rate="3">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
-<div class="rating" data-rate="3.5">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
-<div class="rating rating-4" data-rate="4">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
-<div class="rating" data-rate="4.5">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
-</div>
 <div class="rating" data-rate="5">
-  <i class="star-1">★</i>
-  <i class="star-2">★</i>
-  <i class="star-3">★</i>
-  <i class="star-4">★</i>
-  <i class="star-5">★</i>
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i></div>
 </div>
+Javascript / general web front-end
+
+<div class="rating" data-rate="4.5">
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+</div>
+HTML / CSS
+
+<div class="rating" data-rate="4">
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+</div>
+C++
+
+<div class="rating" data-rate="3.5">
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i></div>
+</div>
+Python
 
 ## Experience
 
