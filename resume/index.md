@@ -2,6 +2,11 @@
 title: Dan Beam's Resumé
 ---
 
+## Education
+
+- B.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2005 - 2009)
+- M.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2009 - on leave)
+
 ## Experience
 
 ### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
@@ -12,7 +17,7 @@ I joined 3 months before launch to lead their web efforts. I guided 2 contractor
 - a set of value propositions to explain to folks why they might want to install / subscribe to quibi
 - a dynamically generated, automatically deployed catalog of Quibi's content (w/ SEO & AMP optimizations)
 
-Individually, I created sites to integrate with partners like [T-Mobile](https://t-mobile.quibi.com) and [Walmart](https://offers.quibi.com/walmart) in order to increase top-of-funnel metrics (i.e. get more users :smile:).
+Individually, I created sites to integrate with partners like [T-Mobile](https://t-mobile.quibi.com) and [Walmart](https://offers.quibi.com/walmart) in order to increase top-of-funnel metrics (i.e. get more users).
 
 I also led the team that created Quibi's [Chromecast receiver](https://developers.google.com/cast/) (what's on the TV).
 
