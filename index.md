@@ -1,6 +1,6 @@
 # Dan Beam
 
-## Software Engineer
+## Experience
 
 ### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
 
