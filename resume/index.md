@@ -10,24 +10,24 @@ M.S., Computer Science - [California State University-Fullerton](http://fullerto
 ## Skills
 
 <div class="rating" data-rate="5">
-  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i></div>
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+  Javascript / general web front-end
 </div>
-Javascript / general web front-end
 
 <div class="rating" data-rate="4.5">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+  HTML / CSS
 </div>
-HTML / CSS
 
 <div class="rating" data-rate="4">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+  C++
 </div>
-C++
 
 <div class="rating" data-rate="3.5">
-  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i></div>
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+  Python / React / Node.js
 </div>
-Python
 
 ## Experience
 
