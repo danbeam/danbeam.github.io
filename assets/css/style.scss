@@ -6,11 +6,11 @@
 ul li {
   display: flex;
   list-style: none;
-  margin-inline-start: -16px;
-  margin-inline-end: 16px;
 }
 
 ul li::before {
   content: '>';
+  margin-inline-start: -16px;
+  margin-inline-end: 16px;
   opacity: .5;
 }
