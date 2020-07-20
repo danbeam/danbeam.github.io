@@ -1,5 +1,5 @@
 ---
-title: Dan Beam
+title: Dan Beam's Resumé
 ---
 
 ## Experience
