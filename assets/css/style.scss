@@ -15,8 +15,15 @@ ul li::before {
   position: absolute;
 }
 
-h2, h3 {
+h2:not(:first-of-type) {
+  margin-top: 2em;
+}
+
+h3 {
   margin-top: 3em;
+}
+h2 + h3 {
+  margin-top: 0;
 }
 
 // Built output of https://gist.github.com/chimericdream/9231323
