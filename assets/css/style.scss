@@ -15,10 +15,8 @@ ul li::before {
   position: absolute;
 }
 
-p, ul {
-  & + h3 {
-    margin-top: 3em;
-  }
+h2, h3 {
+  margin-top: 3em;
 }
 
 // Built output of https://gist.github.com/chimericdream/9231323
