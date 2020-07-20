@@ -1,3 +1,7 @@
+---
+title: Dan Beam
+---
+
 ## Experience
 
 ### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
