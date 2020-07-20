@@ -84,15 +84,15 @@ Some websites I ripped apart and put back together:
 
 I helped develop a custom CMS in PHP, PEAR / PECL, and MySQL. I helped on the front-end via UI feature work in HTML/CSS/JS/jQuery, learned the wonders of Apache's mod_rewrite, and did some security and performance analysis. I ended up fixing issues systemic to all of AEG's websites dealing with XSS, SQL injection, and/or arbitrary execution exploits.
 
-### Web Software Engineer @ [Mt. San Antonio College](https://mtsac.edu) (Jun 2007 – Jun 2009)
+### Web Software Engineer @ [Mt. San Antonio College](https://www.mtsac.edu) (Jun 2007 – Jun 2009)
 
 Part of a team of 3 that developed, designed, and administered mtsac.edu. I was also lead programmer for all server-side (PHP/MySQL) and client-side (Javascript) scripting, responsible for almost all interactive features as well as a homepage redesign.
 
-### Software Engineering @ [Central Desktop](https://centraldesktop.com) (Aug 2008 – Dec 2008, intern)
+### Software Engineering @ [Central Desktop](https://en.wikipedia.org/wiki/Central_Desktop) (Aug 2008 – Dec 2008, intern)
 
 I worked in a fast-paced Agile/Scrum environment for a collaborative business mgmt tool (centraldesktop.com). I was responsible for fixing bugs, adding features, giving input (during scrum planning), and helping develop a site with over hundreds of thousands of users worldwide.
 
-### Advertising Webmaster @ Daily Titan Newspaper (Jun 2005 – Jul 2007)
+### Advertising Webmaster @ [The Daily Titan](https://dailytitan.com) (Jun 2005 – Jul 2007)
 
 Sole developer of main domain, dailytitan.com, and various subdomains: history.dailytitan.com, archive.dailytitan.com (they even won awards!).
 
