@@ -12,4 +12,5 @@ ul li {
 
 ul li::before {
   content: '>';
+  opacity: .5;
 }
