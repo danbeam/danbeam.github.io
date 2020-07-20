@@ -1,13 +1,25 @@
+# Dan Beam
+
+## Software Engineer
+
 ### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
 
-Hollywood, CA
+Quibi is a mobile-first streaming app that launched in Apr 2020.  Quibi raised $1.75BN in funding as of Mar 2020, and launched with over 1 million users.
+
+I joined 3 months before launch to lead their web efforts. I guided 2 contractors in creating / iterating on quibi.com, which is:
+- a set of value propositions to explain to folks why they might want to install / subscribe to quibi
+- a dynamically generated, automatically deployed catalog of Quibi's content (w/ SEO & AMP optimizations)
+
+Individually, I created sites to integrate with partners like [T-Mobile](https://t-mobile.quibi.com) and [Walmart](https://offers.quibi.com/walmart) in order to increase top-of-funnel metrics (i.e. get more users :smile:).
+
+I also led the team that created Quibi's [Chromecast receiver](https://developers.google.com/cast/) (what's on the TV).
 
 ### Staff Software Engineer @ [Google](https://google.com) (Jul 2011 - Jan 2020)
 
 #### [Chrome](https://google.com/chrome) (Oct 2018 - Jan 2020)
 
 - Reskinned all of Chrome's web UIs myself for dark mode (e.g. Mac OS X Mojave, Win10)
-- Led Chrome's desktop New Tab page team (super visible surface w/ tons of traffic)
+- Led a team of 4 working on Chrome's desktop New Tab page team (super visible surface w/ tons of traffic)
 
 #### [Assistant](https://assistant.google.com/) (Jun 2017 - Oct 2018)
 
