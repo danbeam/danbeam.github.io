@@ -110,13 +110,3 @@ h2 + h3 {
 .star-5 {
   margin-inline-end: 1em;
 }
-
-/** Print */
-@media print {
-  .rating {
-    -webkit-print-color-adjust: exact;
-  }
-  .rating i {
-    text-shadow: none;
-  }
-}
