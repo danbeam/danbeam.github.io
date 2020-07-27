@@ -23,5 +23,12 @@
       </section>
     </div>
 
+    <script>
+      document.addEventListener('click', e => {
+        if (e.target.matches('h3')) {
+          e.target.classList.toggle('open');
+        }
+      });
+    </script>
   </body>
 </html>
