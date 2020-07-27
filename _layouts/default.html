@@ -25,8 +25,15 @@
 
     <script>
       document.addEventListener('click', e => {
-        if (e.target.matches('h3')) {
-          e.target.classList.toggle('open');
+        if (e.target.tagName.toLowerCase() !== 'h3') {
+          return;
+        }
+        e.target.classList.toggle('open');
+        let next = e.target;
+        for (;;) {
+          next = next.nextElementSibling;
+          if (!next || next.tagName.toLowerCase() === 'h3') break;
+          next.hidden = !next.hidden; 
         }
       });
     </script>
