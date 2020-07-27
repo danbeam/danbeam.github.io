@@ -31,9 +31,11 @@ M.S., Computer Science - [California State University-Fullerton](http://fullerto
 
 ## Experience
 
-### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
+<h3 class="open">
+Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
+</h3>
 
-<section class="open">
+<section>
 
 Quibi is a mobile-first streaming app that launched in Apr 2020.  Quibi raised $1.75BN in funding as of Mar 2020, and launched with over 1 million users.
 
@@ -47,9 +49,11 @@ I also led the team that created Quibi's [Chromecast receiver](https://developer
 
 </section>
 
-### Staff Software Engineer @ [Google](https://google.com) (Jul 2011 - Jan 2020)
+<h3 class="open">
+Staff Software Engineer @ [Google](https://google.com) (Jul 2011 - Jan 2020)
+</h3>
 
-<section class="open>
+<section>
 
 #### [Chrome](https://google.com/chrome) (Oct 2018 - Jan 2020)
 
