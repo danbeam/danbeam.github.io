@@ -4,8 +4,8 @@ title: Dan Beam's Resumé
 
 ## Education
 
-B.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2005 - 2009)<br>
-M.S., Computer Science - [California State University-Fullerton](http://fullerton.edu) (2009 - on leave)
+B.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2005 - 2009)<br>
+M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 ## Skills
 
@@ -32,7 +32,7 @@ M.S., Computer Science - [California State University-Fullerton](http://fullerto
 ## Experience
 
 <h3 class="open">
-Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
+  Principal Engineer @ <a href="https://quibi.com">Quibi</a> (Jan 2020 - Present)
 </h3>
 
 <section>
@@ -50,7 +50,7 @@ I also led the team that created Quibi's [Chromecast receiver](https://developer
 </section>
 
 <h3 class="open">
-Staff Software Engineer @ [Google](https://google.com) (Jul 2011 - Jan 2020)
+  Staff Software Engineer @ <a href="https://google.com">Google</a> (Jul 2011 - Jan 2020)
 </h3>
 
 <section>
