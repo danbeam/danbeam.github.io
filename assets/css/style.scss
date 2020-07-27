@@ -26,10 +26,6 @@ h2 + h3 {
   margin-top: 0;
 }
 
-h3:not(.open) + section {
-  display: none;
-}
-
 // Built output of https://gist.github.com/chimericdream/9231323
 
 /* latin-ext */
