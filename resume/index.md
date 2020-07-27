@@ -43,8 +43,6 @@ Individually, I created sites to integrate with partners like [T-Mobile](https:/
 
 I also led the team that created Quibi's [Chromecast receiver](https://developers.google.com/cast/) (what's on the TV).
 
-</section>
-
 ### Staff Software Engineer @ [Google](https://google.com) (Jul 2011 - Jan 2020)
 
 #### [Chrome](https://google.com/chrome) (Oct 2018 - Jan 2020)
@@ -75,8 +73,6 @@ Misc things:
 - Typechecked many thousands of lines of JavaScript continuously
 - Contributed to [Polymer](https://www.polymer-project.org/1.0/)
 - Presented at [Google I/O](https://www.youtube.com/watch?v=1M50AXPd0Tg)
-
-</section>
 
 ### Web Software Engineer @ [Yahoo!](https://yahoo.com) (Jul 2010 – Jul 2011)
 
