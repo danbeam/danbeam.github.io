@@ -33,6 +33,8 @@ M.S., Computer Science - [California State University-Fullerton](http://fullerto
 
 ### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
 
+<section class="open">
+
 Quibi is a mobile-first streaming app that launched in Apr 2020.  Quibi raised $1.75BN in funding as of Mar 2020, and launched with over 1 million users.
 
 I joined 3 months before launch to lead their web efforts. I guided 2 contractors in creating / iterating on quibi.com, which is:
@@ -43,7 +45,11 @@ Individually, I created sites to integrate with partners like [T-Mobile](https:/
 
 I also led the team that created Quibi's [Chromecast receiver](https://developers.google.com/cast/) (what's on the TV).
 
+</section>
+
 ### Staff Software Engineer @ [Google](https://google.com) (Jul 2011 - Jan 2020)
+
+<section class="open>
 
 #### [Chrome](https://google.com/chrome) (Oct 2018 - Jan 2020)
 
@@ -74,13 +80,21 @@ Misc things:
 - Contributed to [Polymer](https://www.polymer-project.org/1.0/)
 - Presented at [Google I/O](https://www.youtube.com/watch?v=1M50AXPd0Tg)
 
+</section>
+
 ### Web Software Engineer @ [Yahoo!](https://yahoo.com) (Jul 2010 – Jul 2011)
+
+<section>
 
 Helped refactor and "modernize" new version of Yahoo! News to a more central stack (using PHP, CSS, JavaScript). Additionally, harnessed my efficient/lazy hacker powers to create small tools and scripts used by many developers all throughout Yahoo!'s media dept.
 
 Also helped refactor/add to a completely browser-based media player called Yahoo! Web Player. It's no longer maintained, but it played and recognize content on internal and external sites.
 
+</section>
+
 ### Web Software Engineer @ [Ticketmaster](https://ticketmaster.com)/[Live Nation](https://livenation.com) (Mar 2010 – Jul 2010, contract)
+
+<section>
 
 Contractor, helping w/ London 2012 Olympics ticketing website.
 
@@ -90,7 +104,11 @@ I implemented security enhancements, fixed many functional and content bugs, tho
 
 I also worked briefly on ticketmaster.com and livenation.com (which sneakily switched to Ticketmaster's stack after their merger). I made style changes, added enhancements, worked on feature migration and integration, and helped make sure these changes did not affect other sites on the same infrastructure (regression tested).
 
+</section>
+
 ### Web Software Engineer @ [AEG](https://aegworldwide.com) (Jun 2009 – Mar 2010)
+
+<section>
 
 Worked for AEG on Staples Center and LA Live's websites.
 
@@ -111,16 +129,30 @@ Some websites I ripped apart and put back together:
 
 I helped develop a custom CMS in PHP, PEAR / PECL, and MySQL. I helped on the front-end via UI feature work in HTML/CSS/JS/jQuery, learned the wonders of Apache's mod_rewrite, and did some security and performance analysis. I ended up fixing issues systemic to all of AEG's websites dealing with XSS, SQL injection, and/or arbitrary execution exploits.
 
+</section>
+
 ### Web Software Engineer @ [Mt. San Antonio College](https://www.mtsac.edu) (Jun 2007 – Jun 2009)
+
+<section>
 
 Part of a team of 3 that developed, designed, and administered mtsac.edu. I was also lead programmer for all server-side (PHP/MySQL) and client-side (Javascript) scripting, responsible for almost all interactive features as well as a homepage redesign.
 
+</section>
+
 ### Software Engineering @ [Central Desktop](https://en.wikipedia.org/wiki/Central_Desktop) (Aug 2008 – Dec 2008, intern)
+
+<section>
 
 I worked in a fast-paced Agile/Scrum environment for a collaborative business mgmt tool (centraldesktop.com). I was responsible for fixing bugs, adding features, giving input (during scrum planning), and helping develop a site with over hundreds of thousands of users worldwide.
 
+</section>
+
 ### Advertising Webmaster @ [The Daily Titan](https://dailytitan.com) (Jun 2005 – Jul 2007)
+
+<section>
 
 Sole developer of main domain, dailytitan.com, and various subdomains: history.dailytitan.com, archive.dailytitan.com (they even won awards!).
 
 I also created an online yearbook / community for CSU Fullerton while with The Daily Titan (titanyearbook.com), as well as posted the online news items and ads in early morning hours.
+
+</section>
