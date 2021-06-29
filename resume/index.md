@@ -56,7 +56,7 @@ I've also:
 
 ### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Nov 2020)
 
-Quibi is a mobile-first streaming app that launched in Apr 2020.  Quibi raised $1.75BN in funding as of Mar 2020, and launched with over 1 million users.
+Quibi was a mobile-first streaming app that launched in Apr 2020.  Quibi raised $1.75BN in funding as of Mar 2020, and launched with over 1 million users.
 
 I joined 3 months before launch to lead their web efforts.
 
