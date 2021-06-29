@@ -11,7 +11,7 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 <div class="rating" data-rate="5">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  Javascript / general web front-end
+  Javascript / browsers / general web front-end
 </div>
 
 <div class="rating" data-rate="4.5">
@@ -26,22 +26,49 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 <div class="rating" data-rate="3.5">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  Python / React / Node.js
+  Python / React / Node.js / TypeScript
+</div>
+
+<div class="rating" data-rate="3">
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+  GraphQL
 </div>
 
 ## Experience
 
-### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Present)
+### Staff Software Engineer @ [Airbnb](https://airbnb.com) (Nov 2020 - Present)
+
+I'm a senior individual contributor / technical leader in the [Trust](https://airbnb.com/trust) org at Airbnb; we deal with e.g. anti-fraud, physical safety, bot detection, and user challenges and frictions (think recaptcha or texting a login code).
+
+I'm the web lead for an Airbnb-wide framework that manages risk detection and enforcement.  This framework is implemented with [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [GraphQL](https://graphql.org/), [Jest](https://jestjs.io/) / [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), and previously [Redux](https://redux.js.org/) and [Enzyme](https://enzymejs.github.io/enzyme/).<sup>[1]</sup>
+
+<sup>[1]</sup> I wouldn't call myself a master of any of these skills 😉.
+
+In addition to web, I've also helped design, plan, track, and execute projects across all the frontend tech stacks this framework supports (i.e. desktop/mobile web, native Android + iOS).
+
+I've also:
+- designed & implemented funnel metrics + time spent to measure and optimize business critical flows
+- acted as an oncall / handled business critical matters on urgent timelines
+- furthered bot detection across Airbnb / helped Google solve recaptcha bugs (we found → they fixed → we verified)
+- championed privacy, code quality, and technical direction + refactor
+- volunteered as a frontend architecture interviewer
+- created an org-wide, dynamic careers page to recruit technical talent
+
+### Principal Engineer @ [Quibi](https://quibi.com) (Jan 2020 - Nov 2020)
 
 Quibi is a mobile-first streaming app that launched in Apr 2020.  Quibi raised $1.75BN in funding as of Mar 2020, and launched with over 1 million users.
 
-I joined 3 months before launch to lead their web efforts. I guided 2 contractors in creating / iterating on quibi.com, which is:
-- a set of value propositions to explain to folks why they might want to install / subscribe to quibi
-- a dynamically generated, automatically deployed catalog of Quibi's content (w/ SEO & AMP optimizations)
+I joined 3 months before launch to lead their web efforts.
 
-Individually, I created sites to integrate with partners like [T-Mobile](https://t-mobile.quibi.com) and [Walmart](https://offers.quibi.com/walmart) in order to increase top-of-funnel metrics (i.e. get more users).
+In parallel I:
 
-I also led the team that created Quibi's [Chromecast receiver](https://developers.google.com/cast/) (what's on the TV).
+- guided 2 contractors in creating / iterating on quibi.com, which is:
+  - a set of value propositions to explain to folks why they might want to install / subscribe to quibi
+  - a dynamically generated, automatically deployed catalog of Quibi's content (w/ SEO & AMP optimizations)
+- individually created sites to integrate with partners like [T-Mobile](https://t-mobile.quibi.com) and [Walmart](https://offers.quibi.com/walmart) in order to increase top-of-funnel metrics (i.e. get more users).
+- led the team that created Quibi's [Chromecast receiver](https://developers.google.com/cast/) (what's on the TV).
+
+Quibi [announced its shutdown on Oct 21, 2020](https://quibi-hq.medium.com/an-open-letter-from-quibi-8af6b415377f).
 
 ### Staff Software Engineer @ [Google](https://google.com) (Jul 2011 - Jan 2020)
 
