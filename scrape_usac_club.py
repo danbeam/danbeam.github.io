@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import bs4
 import datetime
 import os
@@ -5,7 +7,7 @@ import random
 import re
 import sys
 import time
-import urllib2
+import urllib.request
 
 
 BASE_URL = 'http://legacy.usacycling.org'
@@ -17,11 +19,11 @@ _HERE = os.path.dirname(__file__)
 _USER_AGENT = open(os.path.join(_HERE, 'user_agent.txt')).read().strip()
 _ALL_PROXIES = open(os.path.join(_HERE, 'http_proxy.txt')).read().strip().splitlines()
 _HTTP_PROXY = _ALL_PROXIES[random.randint(0, len(_ALL_PROXIES) - 1)].strip()
-print >> sys.stderr, 'Using HTTP proxy: %s' % _HTTP_PROXY
+print('Using HTTP proxy: %s' % _HTTP_PROXY, file=sys.stderr)
 
 
-_PROXY_HANDLER = urllib2.ProxyHandler({'http': _HTTP_PROXY})
-_URL_OPENER = urllib2.build_opener(_PROXY_HANDLER)
+_PROXY_HANDLER = urllib.request.ProxyHandler({'http': _HTTP_PROXY})
+_URL_OPENER = urllib.request.build_opener(_PROXY_HANDLER)
 _URL_OPENER.addheaders = [('User-Agent', _USER_AGENT)]
 
 
@@ -61,7 +63,7 @@ def make_member(a):
 def make_soup(url):
   start = time.time()
   contents = _URL_OPENER.open(url).read()
-  print >> sys.stderr, 'Loading %s took %.2f seconds' % (url, time.time() - start)
+  print('Loading %s took %.2f seconds' % (url, time.time() - start), file=sys.stderr)
   return bs4.BeautifulSoup(contents, 'html.parser')
 
 
@@ -75,12 +77,12 @@ def result_pair(el):
 
 def main(args):
   club_url = CLUB_URL_TEMPLATE % args.club_id
-  print >> sys.stderr, 'Scraping club: %s' % club_url
-  members = map(make_member, make_soup(club_url).find_all(member_link))
+  print('Scraping club: %s' % club_url, file=sys.stderr)
+  members = list(map(make_member, make_soup(club_url).find_all(member_link)))
   results = []
 
   if not members:
-    print >> sys.stderr, 'No members for that club found'
+    print('No members for that club found', file=sys.stderr)
 
   excluded_comp_ids = args.exclude_comp_ids.split(',')
 
@@ -89,17 +91,17 @@ def main(args):
       continue
 
     member_url = RESULTS_URL_TEMPLATE % member['comp_id']
-    print >> sys.stderr, 'Scraping member: %s (%s)' % (member['name'], member_url)
+    print('Scraping member: %s (%s)' % (member['name'], member_url), file=sys.stderr)
     races = make_soup(member_url).find('table').find_all(result_pair)
 
     if not races:
-      print >> sys.stderr, 'No race results found for %s (%s)' % (member['name'], member_url)
+      print('No race results found for %s (%s)' % (member['name'], member_url), file=sys.stderr)
 
     assert len(races) % 2 == 0
-    num_races = len(races) / 2
+    num_races = int(len(races) / 2)
 
-    first_rows = map(extract_first_row, races[0::2])
-    second_rows = map(extract_second_row, races[1::2])
+    first_rows = list(map(extract_first_row, races[0::2]))
+    second_rows = list(map(extract_second_row, races[1::2]))
     assert len(first_rows) == num_races and len(second_rows) == num_races
 
     for i in range(0, num_races):
@@ -147,4 +149,4 @@ if __name__ == '__main__':
   results_json = json.dumps(main(args))
   if args.jsonp_callback:
     results_json = args.jsonp_callback + '(' + results_json + ')'
-  print results_json
+  print(results_json)
