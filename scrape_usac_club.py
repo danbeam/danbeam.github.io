@@ -112,6 +112,8 @@ def main(args):
       result.update(second_rows[i])
       results.append(result)
 
+    time.sleep(4)
+
   if args.since:
     parse_date = lambda s: datetime.datetime.strptime(s, '%Y-%m-%d')
     since = parse_date(args.since)
