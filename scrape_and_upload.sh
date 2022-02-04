@@ -13,7 +13,7 @@ log "I woke up"
 
 readonly SCRAPE_CMD="python3 $HERE/scrape_usac_club.py"
 readonly CLUB_ID=15733
-readonly EXTRA_ARGS="--jsonp_callback got_race_results --exclude_comp_ids 549978,22423,188907 --since=2018-01-01"
+readonly EXTRA_ARGS="--jsonp_callback got_race_results --exclude_comp_ids 549978,395517,22423 --since=2021-01-01"
 
 readonly RESULTS_FILE="$HERE/got_race_results.js"
 readonly TMP_FILE="$RESULTS_FILE.tmp"
