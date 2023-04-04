@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 
+# TODO: rename to scrape_usac_members.py?
+
 import bs4
 import datetime
+import json
 import os
 import random
 import re
@@ -10,12 +13,13 @@ import time
 import urllib.request
 
 
-BASE_URL = 'http://legacy.usacycling.org'
-CLUB_URL_TEMPLATE = BASE_URL + '/clubs/members.php?club=%s'
-RESULTS_URL_TEMPLATE = BASE_URL + '/results/?compid=%s'
+RESULTS_URL_TEMPLATE = 'http://legacy.usacycling.org/results/?compid=%s'
 
 
 _HERE = os.path.dirname(__file__)
+
+_DEFAULT_MEMBERS_JSON_PATH=os.path.join(_HERE, 'members.json')
+
 _USER_AGENT = open(os.path.join(_HERE, 'user_agent.txt')).read().strip()
 _ALL_PROXIES = open(os.path.join(_HERE, 'http_proxy.txt')).read().strip().splitlines()
 _HTTP_PROXY = _ALL_PROXIES[random.randint(0, len(_ALL_PROXIES) - 1)].strip()
@@ -32,6 +36,8 @@ def extract_first_row(tr):
   name, url = tr.find('a').text.strip(), tr.find('a')['href']
   permit_id = re.search('permit=([0-9-]+)', url).group(1)
   month, day, year = date_text.split('/')
+  if not year.isdigit() or int(year) < 1900:
+    return
   date = '%s-%s-%s' % (year, month, day)
   discipline = tr.find('span', title='discipline').text.strip()
   age = tr.find('span', title='age')
@@ -45,19 +51,6 @@ def extract_second_row(tr):
     return None
   place, field = text.split(' / ')
   return {'field': int(field), 'place': int(place)}
-
-
-def get_comp_id(href):
-  maybe_id = re.search('^\/results\/?\?compid=(\d+)$', href)
-  return maybe_id.group(1) if maybe_id else None
-
-
-def member_link(el):
-  return el.name == 'a' and el.text.strip() and el.has_attr('href') and get_comp_id(el['href'])
-
-
-def make_member(a):
-  return {'comp_id': get_comp_id(a['href']), 'name': a.text.strip()}
 
 
 def make_soup(url):
@@ -76,20 +69,13 @@ def result_pair(el):
 
 
 def main(args):
-  club_url = CLUB_URL_TEMPLATE % args.club_id
-  print('Scraping club: %s' % club_url, file=sys.stderr)
-  members = list(map(make_member, make_soup(club_url).find_all(member_link)))
+  members = json.load(open(args.members_json_path))
   results = []
 
   if not members:
     print('No members for that club found', file=sys.stderr)
 
-  excluded_comp_ids = args.exclude_comp_ids.split(',')
-
   for member in members:
-    if member['comp_id'] in excluded_comp_ids:
-      continue
-
     member_url = RESULTS_URL_TEMPLATE % member['comp_id']
     print('Scraping member: %s (%s)' % (member['name'], member_url), file=sys.stderr)
     races = make_soup(member_url).find('table').find_all(result_pair)
@@ -105,6 +91,8 @@ def main(args):
     assert len(first_rows) == num_races and len(second_rows) == num_races
 
     for i in range(0, num_races):
+      if not first_rows[i]:
+        continue  # bad date (e.g. 00/00/0000)
       if not second_rows[i]:
         continue  # DNF
       result = {'member': member}
@@ -137,17 +125,16 @@ def main(args):
 
 if __name__ == '__main__':
   import argparse
-  parser = argparse.ArgumentParser(description="Scrape a USAC club's results")
-  parser.add_argument('club_id', type=int, help='USAC club ID')
-  parser.add_argument('--exclude_comp_ids', type=str, help='Comma separated list of competitor IDs to exclude')
+  parser = argparse.ArgumentParser(description="Scrape a list of USAC's competitors' results")
+  parser.add_argument('--members_json_path', type=str, help='Path to members JSON file', default=_DEFAULT_MEMBERS_JSON_PATH)
   parser.add_argument('--jsonp_callback', type=str, help='A JSONP callback')
   parser.add_argument('--min_field_size', type=int, help='Minimum race field size')
   parser.add_argument('--min_place', type=int, help='Minimum race place')
   parser.add_argument('--since', type=str, help='Only show results since this date (Y-m-d)', default='%s-01-01' % datetime.datetime.now().year)
-  parser.add_argument('--only_road', type=bool, help='Only road results')
+  parser.add_argument('--only_road', type=bool, help='Only road results', default=True)
   parser.add_argument('--sort_by_date', type=bool, help='Sort results reverse chronologically', default=True)
   args = parser.parse_args(sys.argv[1:])
-  import json
+
   results_json = json.dumps(main(args))
   if args.jsonp_callback:
     results_json = args.jsonp_callback + '(' + results_json + ')'
