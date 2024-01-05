@@ -11,36 +11,67 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 <div class="rating" data-rate="5">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  Javascript / browsers / general web front-end
-</div>
-
-<div class="rating" data-rate="4.5">
-  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  HTML / CSS
+  JavaScript, TypeScript, technical design/leadership
 </div>
 
 <div class="rating" data-rate="4">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  C++
+  parsers, ASTs, linters, Node.js, codemods
+</div>
+
+<div class="rating" data-rate="4">
+  <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
+  HTML, CSS, browsers, general web front-end
 </div>
 
 <div class="rating" data-rate="3.5">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  Python / React / Node.js / TypeScript
+  C++
 </div>
 
 <div class="rating" data-rate="3">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  GraphQL
+  Python, React, SQL
 </div>
 
 ## Experience
 
 ### Staff Software Engineer @ [Airbnb](https://airbnb.com) (Nov 2020 - Present)
 
-I'm a senior individual contributor / technical leader in the [Trust](https://airbnb.com/trust) org at Airbnb; we deal with e.g. anti-fraud, physical safety, bot detection, and user challenges and frictions (think recaptcha or texting a login code).
+I’m a senior individual contributor / technical leader at Airbnb.
 
-I'm the web lead for an Airbnb-wide framework that manages risk detection and enforcement.  This framework is implemented with [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [GraphQL](https://graphql.org/), [Jest](https://jestjs.io/) / [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), and previously [Redux](https://redux.js.org/) and [Enzyme](https://enzymejs.github.io/enzyme/).<sup>[1]</sup>
+#### Web Platform (Aug 2021 - Present)
+
+I'm currently on the Web Platform team, which supports things critical to web development at Airbnb like:
+- continuous integration
+- browser support
+- in-house frameworks
+- experimentation
+- web development tooling
+- linting
+- testing
+
+Lately I've been leading both the
+
+- Observability squad
+  - structured logging (Thrift schemas)
+  - unstructured logging (Datadog metrics)
+  - error reporting (via Bugsnag, previously Sentry)
+  - alerting (via an in-house system to create Datadog / Grafana monitors)
+
+- Experimentation squad
+  - we implemented and maintain the complex (A/B testing) and simple (on & off switch) systems to launch features at Airbnb without needing to redeploy code
+
+I previously led the Unit Testing squad in which I:
+
+- helped strategically rethink testing at Airbnb (3-5yr vision presented to CTO)
+- rewrote thousands of tests (chai, sinon → jest and enzyme → @testing-library/react) to reduce technical debt (via jscodeshift codemods, contractors, and elbow grease)
+
+#### Trust (Oct 2020 - Sep 2021)
+
+I previously worked in the [Trust](https://airbnb.com/trust) org at Airbnb, which deals with e.g. anti-fraud, physical safety, bot detection, and user challenges and frictions (think recaptcha or texting a login code).
+
+I was the web lead for an Airbnb-wide framework that manages risk detection and enforcement.  This framework is implemented with [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [GraphQL](https://graphql.org/), [Jest](https://jestjs.io/) / [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), and previously [Redux](https://redux.js.org/) and [Enzyme](https://enzymejs.github.io/enzyme/).<sup>[1]</sup>
 
 <sup>[1]</sup> I wouldn't call myself a master of any of these skills 😉.
 
