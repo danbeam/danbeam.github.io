@@ -16,12 +16,12 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 <div class="rating" data-rate="4">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  parsers, ASTs, linters, Node.js, codemods
+  Node.js, parsers, ASTs, linters, codemods
 </div>
 
 <div class="rating" data-rate="4">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  HTML, CSS, browsers, general web front-end
+  HTML, CSS, browsers, general web frontend
 </div>
 
 <div class="rating" data-rate="3.5">
@@ -167,7 +167,7 @@ Some websites I ripped apart and put back together:
 - lalive.com
 - savethegrunt.com
 
-I helped develop a custom CMS in PHP, PEAR / PECL, and MySQL. I helped on the front-end via UI feature work in HTML/CSS/JS/jQuery, learned the wonders of Apache's mod_rewrite, and did some security and performance analysis. I ended up fixing issues systemic to all of AEG's websites dealing with XSS, SQL injection, and/or arbitrary execution exploits.
+I helped develop a custom CMS in PHP, PEAR / PECL, and MySQL. I helped on the frontend via UI feature work in HTML/CSS/JS/jQuery, learned the wonders of Apache's mod_rewrite, and did some security and performance analysis. I ended up fixing issues systemic to all of AEG's websites dealing with XSS, SQL injection, and/or arbitrary execution exploits.
 
 ### Web Software Engineer @ [Mt. San Antonio College](https://www.mtsac.edu) (Jun 2007 – Jun 2009)
 
