@@ -14,7 +14,7 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
   JavaScript, TypeScript, technical design/leadership
 </div>
 
-<div class="rating" data-rate="4">
+<div class="rating" data-rate="4.5">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
   Node.js, parsers, ASTs, linters, codemods
 </div>
