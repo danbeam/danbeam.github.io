@@ -1,5 +1,5 @@
 ---
-title: Dan Beam's Resumé
+title: Dan Beam's Résumé
 ---
 
 ## Education
