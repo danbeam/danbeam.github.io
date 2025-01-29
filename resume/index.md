@@ -21,7 +21,7 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 <div class="rating" data-rate="4">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  HTML, CSS, browsers, general web frontend
+  React, HTML, CSS, browsers, general web frontend
 </div>
 
 <div class="rating" data-rate="3.5">
@@ -31,7 +31,7 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 <div class="rating" data-rate="3">
   <i class="star-1">★</i><i class="star-2">★</i><i class="star-3">★</i><i class="star-4">★</i><i class="star-5">★</i>
-  Python, React, SQL
+  Python, SQL
 </div>
 
 ## Experience
@@ -40,7 +40,11 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 I’m a senior individual contributor / technical leader at Airbnb.
 
-#### Web Platform (Aug 2021 - Present)
+#### On Trip (Aug 2024 - present)
+
+We're revamping Airbnb's Trips page!
+
+#### Web Platform (Aug 2021 - Aug 2024)
 
 I'm currently on the Web Platform team, which supports things critical to web development at Airbnb like:
 - continuous integration
