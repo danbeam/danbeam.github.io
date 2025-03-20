@@ -42,11 +42,13 @@ I’m a senior individual contributor / technical leader at Airbnb.
 
 #### On Trip (Aug 2024 - present)
 
-We're revamping Airbnb's Trips page!
+I recently switched to the "On Trip" team. We're revamping the "Trips" page, changing the UI and incorporating new offerings.
 
 #### Web Platform (Aug 2021 - Aug 2024)
 
-I'm currently on the Web Platform team, which supports things critical to web development at Airbnb like:
+I was previously on the Web Platform team.
+
+They support things critical to web development at Airbnb like:
 - continuous integration
 - browser support
 - in-house frameworks
@@ -55,21 +57,22 @@ I'm currently on the Web Platform team, which supports things critical to web de
 - linting
 - testing
 
-Lately I've been leading both the
+I previously led these squads (team groups):
 
-- Observability squad
+- Observability
   - structured logging (Thrift schemas)
   - unstructured logging (Datadog metrics)
   - error reporting (via Bugsnag, previously Sentry)
   - alerting (via an in-house system to create Datadog / Grafana monitors)
 
-- Experimentation squad
+- Experimentation
   - we implemented and maintain the complex (A/B testing) and simple (on & off switch) systems to launch features at Airbnb without needing to redeploy code
 
-I previously led the Unit Testing squad in which I:
-
-- helped strategically rethink testing at Airbnb (3-5yr vision presented to CTO)
-- rewrote thousands of tests (chai, sinon → jest and enzyme → @testing-library/react) to reduce technical debt (via jscodeshift codemods, contractors, and elbow grease)
+- Unit Testing
+  - helped strategically rethink testing at Airbnb (3-5yr vision presented to CTO)
+  - rewrote thousands of tests (chai, sinon → jest and enzyme → @testing-library/react) to reduce technical debt (via jscodeshift codemods, contractors, and elbow grease)
+ 
+I also participated in an oncall rotation, being one of the first to be paged if something web-related were to fail at Airbnb (across the whole company).
 
 #### Trust (Oct 2020 - Sep 2021)
 
