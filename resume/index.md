@@ -2,6 +2,10 @@
 title: Dan Beam's Résumé
 ---
 
+<style>
+h3 { cursor: pointer; }
+</style>
+
 ## Education
 
 B.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2005 - 2009)<br>
@@ -86,7 +90,7 @@ I previously led these squads (team groups):
 - Unit Testing
   - helped strategically rethink testing at Airbnb (3-5yr vision presented to CTO)
   - rewrote thousands of tests (chai, sinon → jest and enzyme → @testing-library/react) to reduce technical debt (via jscodeshift codemods, contractors, and elbow grease)
- 
+
 I also participated in an oncall rotation, being one of the first to be paged if something web-related were to fail at Airbnb (across the whole company).
 
 #### Trust (Oct 2020 - Sep 2021)
