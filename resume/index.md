@@ -40,6 +40,54 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 ## Experience
 
+## Senior Staff Software Engineer @ [Affirm](https://www.affirm.com/) (July 2025 - present)
+
+I am the frontend (FE) area tech lead ([A]TL) for the Purchasing Experience (PX) organization at Affirm, which is made up of:
+
+- ~25 frontend engineers that I lead directly
+- ~25 backend (BE) engineers that I correspond with regularly / sometimes lead or influence (some are fullstack)
+- organized into 6 remote fullstack (FE + BE) teams of ~9 across the US and Europe (~50 total)
+
+I report to the Director of this org and support each of these teams in varying ways depending on their needs, including:
+
+- attending their standups, sprint plannings/retros, and team times when possible
+- reviewing all frontend designs and a majority of all FE pull requests (PRs) for risk assessment and technical quality
+- attending many topic-specific and cross-functional syncs
+- recurring 1:1s with tech leads, managers, and other ICs
+
+PX owns:
+
+- [the JavaScript SDK](https://docs.affirm.com/developers/v1.1-developer-reference/docs/affirmjs-quick-guide) that allows hundreds of thousands of merchants (e.g. Walmart, Amazon, Target) to integrate Affirm with their online store
+- ["As low as $$/mth with Affirm" promotional UI](https://docs.affirm.com/developers/docs/set-up-promotional-messaging) shown on 300k+ merchant websites
+- a [prequalification UI](https://docs.affirm.com/developers/docs/about-promotional-messaging-and-prequalification#prequalification) to show potential borrowers their purchasing power
+- the [checkout experience](https://docs.affirm.com/developers/docs/affirm-checkout-overview) when a user selects Affirm to pay at checkout
+  - initiating a checkout and establishing context / authenticating (note: there are 100+ variations of our checkout)
+  - fetching, showing, and selecting loan terms
+  - fetching, creating, and saving new payment instruments (taking, validating, and saving payment info e.g. credit card or account number)
+  - responding to various "step up" mechanisms in which further information (or sometimes payment) is required to proceed with the transaction
+  - confirming the checkout after decisions have been made and the loan has been underwritten, passing back info to the merchant
+ 
+The general technical stack is:
+
+- TypeScript (and some legacy JavaScript) in a monorepo with mostly [Buildkite](https://buildkite.com/) for CI/CD
+- React and many custom NPM packages (e.g. a components library) we maintain
+- Kotlin [backend-for-frontends (BFFs)](https://en.wikipedia.org/wiki/Front_end_and_back_end#API) and legacy Python backends
+- various [REST](https://en.wikipedia.org/wiki/REST) and [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call) clients (e.g. [gRPC](https://grpc.io/) + [protobuf](https://protobuf.dev/))
+
+Additionally, I take part in various company-wide efforts to:
+
+- shape and improve the future of web development at Affirm dealing with
+  - service-oriented architecture: carving out modules, rethinking deployments / merge queues / deploy trains, etc.)
+  - common code patterns and libraries: which libraries to use, how often to update them, which things to lint for)
+  - observability: tracking things like performance, remotely reported errors (via Sentry) and notifying/alerting on these issues
+  - design systems: themes, components, etc.
+  - mobile<>web code sharing: figuring out at which levels it's possible/useful to share code between React native and web
+- produce technical guidance on good web development practices
+  - which lint rules (ESLint, stylelint, etc.) and styleguide[s] we should use
+  - which format our documentation lives in to be maximally convenient and useful (easy to comment/discover, readable by AI)
+  - creating and maintaing an automated enforcement framework to scale this guidance
+- evaluate whether software engineers should be promoted from Senior to Staff level (promo committee)
+
 ### Staff Software Engineer @ [Airbnb](https://airbnb.com) (Nov 2020 - July 2025)
 
 I was senior individual contributor / technical leader at Airbnb.
