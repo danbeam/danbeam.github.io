@@ -77,10 +77,7 @@ The general technical stack is:
 Additionally, I take part in various company-wide efforts to:
 
 - shape and improve the future of web development at Affirm dealing with: service-oriented architectures, observability, design systems, and sharing code between React Native & web
-- produce technical guidance on good web development practices
-  - which lint rules (ESLint, stylelint, etc.) and styleguide[s] we should use
-  - which format our documentation lives in to be maximally convenient and useful (easy to comment/discover, readable by AI)
-  - creating and maintaining an automated enforcement framework to scale this guidance
+- produce technical guidance on good web development practices: which lint rules and styleguide[s] to use, documentation format (easy to comment/discover, readable by AI), and automated enforcement of this guidance
 - evaluate whether software engineers should be promoted from Senior to Staff level (promo committee)
 
 ### Staff Software Engineer @ [Airbnb](https://airbnb.com) (Nov 2020 - July 2025)
