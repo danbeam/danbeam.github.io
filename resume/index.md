@@ -58,7 +58,7 @@ I report to the Director of this org and support each of these teams in varying 
 PX owns:
 
 - [the JavaScript SDK](https://docs.affirm.com/developers/v1.1-developer-reference/docs/affirmjs-quick-guide) that allows hundreds of thousands of merchants (e.g. Walmart, Amazon, Target) to integrate Affirm with their online store
-- ["As low as $$/mth with Affirm" promotional UI](https://docs.affirm.com/developers/docs/set-up-promotional-messaging) shown on 300k+ merchant websites
+- ["As low as $$/mth with Affirm" promotional UI](https://docs.affirm.com/developers/docs/set-up-promotional-messaging) shown on merchant websites
 - a [prequalification UI](https://docs.affirm.com/developers/docs/about-promotional-messaging-and-prequalification#prequalification) to show potential borrowers their purchasing power
 - the [checkout experience](https://docs.affirm.com/developers/docs/affirm-checkout-overview) when a user selects Affirm to pay at checkout
   - initiating a checkout and establishing context / authenticating (note: there are 100+ variations of our checkout)
