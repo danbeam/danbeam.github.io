@@ -50,7 +50,7 @@ I am the frontend (FE) area tech lead ([A]TL) for the Purchasing Experience (PX)
 
 I report to the Director of this org and support each of these teams in varying ways depending on their needs, including:
 
-- attending their standups, sprint plannings/retros, and team times when possible
+- attending standups, sprint plannings/retros, and team times when possible
 - reviewing all frontend designs and a majority of all FE pull requests (PRs) for risk assessment and technical quality
 - attending many topic-specific and cross-functional syncs
 - recurring 1:1s with tech leads, managers, and other ICs
