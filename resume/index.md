@@ -40,7 +40,7 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 ## Experience
 
-## Senior Staff Software Engineer @ [Affirm](https://www.affirm.com/) (July 2025 - present)
+### Senior Staff Software Engineer @ [Affirm](https://www.affirm.com/) (July 2025 - present)
 
 I am the frontend (FE) area tech lead ([A]TL) for the Purchasing Experience (PX) organization at Affirm, which is made up of:
 
