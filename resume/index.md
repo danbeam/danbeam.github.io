@@ -36,13 +36,28 @@ M.S., Computer Science - [CSU-Fullerton](http://fullerton.edu) (2009 - on leave)
 
 ## Experience
 
-### Staff Software Engineer @ [Airbnb](https://airbnb.com) (Nov 2020 - Present)
+### Staff Software Engineer @ [Airbnb](https://airbnb.com) (Nov 2020 - July 2025)
 
-I’m a senior individual contributor / technical leader at Airbnb.
+I was senior individual contributor / technical leader at Airbnb.
 
-#### On Trip (Aug 2024 - present)
+#### On Trip (Aug 2024 - July 2025)
 
-I recently switched to the "On Trip" team. We're revamping the "Trips" page, changing the UI and incorporating new offerings.
+I previously led the frontend engineering for the "Trips" page, rewriting the UI from the ground up for [services](https://news.airbnb.com/airbnb-2025-summer-release/): a whole new offering in addition to stays and experiences.  The Trips UI helps folks track their booking and get to their stay/experience/service (e.g. provides the address a certain time before the start) and generally deals with the user's experience after booking but before their booking has ended and ties in deeply into reservation details, altering reservations, inviting others ("co-travelers"), etc.  It also provides users with smartlock PINs and upsells experiences in the location while on stays and other things while on the trip.
+
+I worked as the most senior IC on a team of 10 cross-functionally with many designers, product managers, and engineers from other teams to ship on a fairly agressive timeline (6mo) for a very visible, critical surface.
+
+Technologically, Trips uses (on web):
+
+- [GraphQL](https://graphql.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- a bunch of internal components and frameworks (shared design systems components, graphql infra, etc.)
+
+and gets data from [Viaduct](https://github.com/airbnb/viaduct), a Kotlin/Java graphql backend.
+
+I personally wrote a lot of the code for the web UI, lead other frontend contributors, and indentified problems and unblocked.  For example, there was a complicated state graph across multiple platforms (iOS, Android, web) mostly based on time before booking start/end.  Everybody on the team was using different terms, constantly re-explaining things, and folks were basically writing as many bugs as they were fixing.  I created a model for a unified "trip stage", sought feedback from all stakeholders, and implemented the first proof of concept in web code and with supporting documentation (this also drastically affected how designs were done in Figma).  This model significantly reduced miscommunication and complexity while creating a common vocabulary.  I also worked various data modeling problems with backend folks to provide the frontend with the right set of data in the format that would be the most useful and performant.
+
+The new Trips UI launched on all platforms in as part of the CEO keynote for the [Summer 2025 release](https://news.airbnb.com/airbnb-2025-summer-release/).
 
 #### Web Platform (Aug 2021 - Aug 2024)
 
