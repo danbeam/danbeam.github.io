@@ -1,0 +1,49 @@
+:root {
+  --primary: #00f2ff; /* Cyber Cyan */
+  --secondary: #ff00ff; /* Cyber Magenta */
+  --accent: #7000ff; /* Cyber Purple */
+  --background: #050505;
+  --surface: #111111;
+  --text: #ffffff;
+  --text-dim: #b3b3b3;
+  --disco-silver: #c0c0c0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  letter-spacing: 2px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Base animations */
+@keyframes pulse-neon {
+  0% { text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary); }
+  50% { text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary); }
+  100% { text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary); }
+}
