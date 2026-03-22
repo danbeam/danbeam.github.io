@@ -16,6 +16,7 @@ export const MIXES: Mix[] = [
     name: "House Blend: Medium Roast",
     mixcloudUrl: "https://www.mixcloud.com/funk-the-system/house-blend-medium-roast/",
     soundcloudUrl: "https://soundcloud.com/funk-the-system/house-blend-medium-roast",
+    spotifyUrl: "https://open.spotify.com/playlist/7nS1KaJ3oJMVT4dZvAEOVV",
     picture: "https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/9/d/d/9/280e-7c16-4ec4-a87e-6246fc602ad5",
     tags: ["Melodic House", "House"],
     duration: "35m",
