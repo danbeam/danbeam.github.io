@@ -72,7 +72,8 @@
 
 .carousel-arrow:disabled {
   cursor: default;
-  opacity: 0.3;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .carousel-container {
@@ -283,4 +284,53 @@ body::before {
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carousel-container {
+    order: 2;
+  }
+
+  .carousel-arrow {
+    display: none; /* Hide default side arrows or reposition them */
+  }
+
+  /* Create a specific row for arrows on mobile if desired, or just use natural scrolling.
+     The user asked to move them ABOVE, so let's reposition them in a row. */
+  .carousel-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "left-arrow right-arrow"
+      "carousel carousel";
+  }
+
+  .carousel-arrow.left { grid-area: left-arrow; justify-self: end; display: flex; }
+  .carousel-arrow.right { grid-area: right-arrow; justify-self: start; display: flex; }
+  
+  .carousel-arrow:disabled {
+    opacity: 1;
+    border-color: #666;
+    color: #666;
+  }
+
+  .carousel-arrow.active {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .carousel-container { grid-area: carousel; }
+  
+  .section-title {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
 }
