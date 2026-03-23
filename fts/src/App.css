@@ -9,7 +9,7 @@
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid var(--primary);
-  box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.2);
 }
 
 .logo {
@@ -25,7 +25,6 @@
   margin-bottom: 40px;
   text-align: center;
   color: var(--text-dim);
-  text-shadow: 2px 2px var(--accent);
   letter-spacing: 5px;
 }
 
@@ -65,7 +64,7 @@
 }
 
 .carousel-arrow.active:hover {
-  background: rgba(0, 242, 255, 0.1);
+  background: rgba(255, 102, 0, 0.1);
   filter: drop-shadow(0 0 15px var(--primary));
   transform: scale(1.1);
 }
@@ -137,7 +136,7 @@
 .mix-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary);
-  box-shadow: 0 5px 15px rgba(0, 242, 255, 0.3);
+  box-shadow: 0 5px 20px rgba(255, 102, 0, 0.3);
 }
 
 .mix-art-container {
@@ -320,7 +319,7 @@ body::before {
   }
 
   .carousel-arrow.active {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 102, 0, 0.05);
   }
 
   .carousel-container { grid-area: carousel; }

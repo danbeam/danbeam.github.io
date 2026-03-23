@@ -1,11 +1,11 @@
 :root {
-  --primary: #00f2ff; /* Cyber Cyan */
-  --secondary: #ff00ff; /* Cyber Magenta */
-  --accent: #7000ff; /* Cyber Purple */
+  --primary: #ff6600; /* Rebellious Orange */
+  --secondary: #00d4ff; /* Deep Tech Cyan */
+  --accent: #ffcc00; /* Funky Gold */
   --background: #050505;
-  --surface: #111111;
+  --surface: #121212;
   --text: #ffffff;
-  --text-dim: #b3b3b3;
+  --text-dim: #888888;
   --disco-silver: #c0c0c0;
 }
 
